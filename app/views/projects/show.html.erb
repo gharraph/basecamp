@@ -1,2 +1,4 @@
 <h1>Your Project:</h1>
-<h2><%= @project.name%></h2>
+<h2><%= @project.name%></h2></br>
+<%= render :partial => "lists/lists" %>
+<p><%=link_to "New List", new_project_list_path(@project), :class => "btn btn-primary"%></p>

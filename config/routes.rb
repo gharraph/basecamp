@@ -1,5 +1,8 @@
 Basecamp::Application.routes.draw do
-  resources :projects
+
+  resources :projects do
+    resources :lists
+  end
   devise_for :users
 
 

@@ -1,0 +1,10 @@
+<%= form_for([:project, @list]) do |f|%>
+  <div class="field">
+    <%= f.label "Name your list:" %>
+    <%= f.text_field :name %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit "Save", :class=>"btn btn-primary btn-large" %>
+  </div>
+<% end %>

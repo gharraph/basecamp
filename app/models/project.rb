@@ -3,4 +3,5 @@ class Project < ActiveRecord::Base
   has_many :users, :through => :memberships
   has_many :memberships
   validates :name, :presence => true
+  has_many :lists
 end
