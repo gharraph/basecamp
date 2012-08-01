@@ -1,0 +1,12 @@
+<%= form_for(@project) do |f|%>
+  <div class="field">
+    <%= f.label "Name your project:" %>
+    <%= f.text_field :name %>
+     <%= f.label "Do you want this project to be public or private?" %>
+    <%= f.select(:private, [['Private', 'true'], ['Public', 'false']])%>
+  </div>
+
+  <div class="actions">
+    <%= f.submit "Add Project", :class=>"btn btn-primary btn-large" %>
+  </div>
+<% end %>

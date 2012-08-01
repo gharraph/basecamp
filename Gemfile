@@ -13,6 +13,7 @@ group :development, :test do
   gem 'simplecov'
   gem 'fabrication'
   gem 'faker'
+  gem 'quiet_assets'
 end
 
 group :production do
