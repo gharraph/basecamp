@@ -1,3 +1,23 @@
-<h1>Projects#index</h1>
- Welcome to Jessie and Sherief version of Basecamp
-<p>Find me in app/views/projects/index.html.erb</p>
+<h1>Listing Projects</h1>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @projects.each do |project| %>
+  <tr>
+    <td><%= project.name %></td>
+    <td><%= link_to 'Show', project %></td>
+    <td><%= link_to 'Edit', edit_project_path(project), :class => "btn btn-primary" %></td>
+    <td><%= link_to 'Destroy', project, method: :delete, data: { confirm: 'Are you sure?' },  :class => "btn btn-danger"%></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Poll', new_project_path %>

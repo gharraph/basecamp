@@ -12,13 +12,87 @@
         null,
         1,
         null,
+        1,
+        1,
         null
       ],
       "/Users/apprentice/Desktop/basecamp/app/helpers/application_helper.rb": [
         1,
+        null,
+        null,
+        null
+      ],
+      "/Users/apprentice/Desktop/basecamp/app/helpers/projects_helper.rb": [
+        1,
+        null
+      ],
+      "/Users/apprentice/Desktop/basecamp/app/controllers/projects_controller.rb": [
+        1,
+        1,
+        1,
+        null,
+        null,
+        1,
+        0,
+        0,
+        0,
+        0,
+        null,
+        0,
+        0,
+        null,
+        null,
+        null,
+        1,
+        1,
+        null,
+        null,
+        1,
+        1,
+        null,
+        null,
+        1,
+        1,
+        null,
+        null,
+        1,
+        0,
+        0,
+        0,
+        0,
+        null,
+        null,
+        null,
+        1,
+        1,
+        1,
+        1,
+        1,
+        null,
+        null,
+        null
+      ],
+      "/Users/apprentice/Desktop/basecamp/app/controllers/application_controller.rb": [
+        1,
+        1,
+        null
+      ],
+      "/Users/apprentice/Desktop/basecamp/app/models/project.rb": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        null
+      ],
+      "/Users/apprentice/Desktop/basecamp/app/models/membership.rb": [
+        1,
+        1,
+        1,
+        1,
         null
       ]
     },
-    "timestamp": 1343844089
+    "timestamp": 1343858969
   }
 }

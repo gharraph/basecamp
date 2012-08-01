@@ -24,7 +24,8 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </a>
-          <a class="brand" href="#">Basecamp</a>
+         <%= link_to 'Basecamp', root_path, :class => "brand" %>
+         <!-- <a class="brand" href=<%root_path%>>Basecamp</a> -->
           <div class="container nav-collapse">
             <ul class="nav">
               <% if user_signed_in? %>
