@@ -1,4 +1,5 @@
 class ProjectsController < ApplicationController
+  before_filter :current_user_check, :except => [:index]
   def new
     @project = Project.new
   end
