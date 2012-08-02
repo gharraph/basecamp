@@ -4,5 +4,7 @@
 <%= render :partial => "memberships/membership" %>
 <p>
 <%=link_to "New List", new_project_list_path(@project), :class => "btn btn-primary"%>
-<%=link_to "Add member to project", new_project_membership_path(@project), :class => "btn btn-info"%>
+<% if current_user.id == @project.owner_id %>
+  <%=link_to "Add member to project", new_project_membership_path(@project), :class => "btn btn-info" %>
+<% end %>
 </p>

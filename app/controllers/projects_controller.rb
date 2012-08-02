@@ -6,6 +6,7 @@ class ProjectsController < ApplicationController
 
   def create
     @project = Project.new(params[:project])
+    @project.owner_id = current_user.id
     if @project.save
       Membership.create(:project_id => @project.id, :user_id => current_user.id)
       redirect_to @project
