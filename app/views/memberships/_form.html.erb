@@ -1,0 +1,10 @@
+<%= form_for([:project, @membership]) do |f|%>
+  <div class="field">
+    <%= f.label "Enter the email of the person you'd like to invite:" %>
+    <%= text_field_tag :email %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit "Save", :class=>"btn btn-primary btn-large" %>
+  </div>
+<% end %>

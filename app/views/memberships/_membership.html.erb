@@ -1,0 +1,10 @@
+<table class='table'>
+<thead>Members:</thead>
+<tbody>
+<tr>
+<% @project.memberships.each do |membership| %>
+<td><%= membership.user.email %></td>
+</tr>
+</tbody>
+<% end %>
+</table>
