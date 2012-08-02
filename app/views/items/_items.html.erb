@@ -1,0 +1,10 @@
+<table class='table'>
+<thead>Items:</thead>
+<tbody>
+<tr>
+<% @list.items.each do |item| %>
+<td><%=link_to item.description, list_items_path(@list, item) %></td>
+</tr>
+</tbody>
+<% end %>
+</table>

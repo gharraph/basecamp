@@ -22,18 +22,88 @@
         null,
         null
       ],
+      "/Users/apprentice/Desktop/basecamp/app/helpers/items_helper.rb": [
+        1,
+        null
+      ],
+      "/Users/apprentice/Desktop/basecamp/app/helpers/lists_helper.rb": [
+        1,
+        null
+      ],
       "/Users/apprentice/Desktop/basecamp/app/helpers/projects_helper.rb": [
         1,
         null
       ],
-      "/Users/apprentice/Desktop/basecamp/app/models/membership.rb": [
+      "/Users/apprentice/Desktop/basecamp/app/controllers/items_controller.rb": [
+        1,
+        1,
+        0,
+        null,
+        null,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        null,
+        0,
+        0,
+        null,
+        null,
+        null,
+        1,
+        null,
+        null,
+        1,
+        null,
+        null,
+        null
+      ],
+      "/Users/apprentice/Desktop/basecamp/app/controllers/application_controller.rb": [
+        1,
+        1,
+        null
+      ],
+      "/Users/apprentice/Desktop/basecamp/app/models/item.rb": [
         1,
         1,
         1,
         1,
         null
       ],
-      "/Users/apprentice/Desktop/basecamp/app/models/project.rb": [
+      "/Users/apprentice/Desktop/basecamp/app/controllers/lists_controller.rb": [
+        1,
+        1,
+        0,
+        0,
+        null,
+        null,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        null,
+        0,
+        0,
+        null,
+        null,
+        null,
+        1,
+        0,
+        null,
+        null,
+        1,
+        null,
+        null,
+        1,
+        null,
+        null,
+        null
+      ],
+      "/Users/apprentice/Desktop/basecamp/app/models/list.rb": [
         1,
         1,
         1,
@@ -42,6 +112,6 @@
         null
       ]
     },
-    "timestamp": 1343859159
+    "timestamp": 1343867305
   }
 }

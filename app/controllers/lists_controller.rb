@@ -26,10 +26,4 @@ class ListsController < ApplicationController
   def update
 
   end
-
-  def _form
-  end
-
-  def _lists
-  end
 end

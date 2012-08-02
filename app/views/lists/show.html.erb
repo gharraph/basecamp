@@ -1,2 +1,4 @@
-<h1>Lists#show</h1>
-<p>Find me in app/views/lists/show.html.erb</p>
+<h1>Your List:</h1>
+<h2><%= @list.name%></h2></br>
+<%= render :partial => "items/items" %>
+<p><%=link_to "New Item", new_list_item_path(@list), :class => "btn btn-primary"%></p>
