@@ -5,9 +5,8 @@ class ListsController < ApplicationController
   end
 
   def create
-    @list = List.new(params[:list])
-    @project = Project.find params[:project_id]
-    @list.project_id = @project.id
+    @project = current_user.projects.find params[:project_id]
+    @list = @project.lists.build(params[:list])
     if @list.save
       redirect_to project_path(@project)
     else
