@@ -1,6 +1,7 @@
 class ItemsController < ApplicationController
   def new
-    @item = Item.new
+    @list = List.find(params[:list_id])
+    @item = @list.items.build
   end
 
   def create
@@ -16,9 +17,24 @@ class ItemsController < ApplicationController
   end
 
   def show
+     @item = Item.find(params[:id])
+     @list = List.find(params[:list_id])
   end
 
   def edit
+    @item = Item.find(params[:id])
+    @list = List.find(params[:list_id])
+  end
+
+  def update
+    @item = Item.find(params[:id])
+    @list = @item.list
+    if @item.update_attributes(params[:item])
+      flash[:notice] = "Your item has been updated"
+      redirect_to @list
+    end
   end
 
 end
+
+

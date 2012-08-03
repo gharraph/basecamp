@@ -1,7 +1,11 @@
 <%= form_for([:list, @item]) do |f|%>
   <div class="field">
     <%= f.label "Describe your item:" %>
-    <%= f.text_field :description %>
+    <%= f.text_field :description %></br>
+    <%= f.label "Assign member" %>
+    <% if @item  %>
+    <%= f.select(:user_id, @item.member_list)%>
+    <% end %>
   </div>
 
   <div class="actions">

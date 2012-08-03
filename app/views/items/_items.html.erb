@@ -1,10 +1,17 @@
 <table class='table'>
-<thead>Items:</thead>
+
+<thead>
+  <th>Items:</th>
+<th>Assigned to:</th>
+<th>Actions:</th>
+</thead>
 <tbody>
+
 <tr>
 <% @list.items.each do |item| %>
 <td><%=item.description%></td>
-
+<td><%= item.user.email %></td>
+<td><%= link_to 'Edit or assign item to a member', edit_list_item_path(@list, item) %></td>
 </tr>
 </tbody>
 <% end %>

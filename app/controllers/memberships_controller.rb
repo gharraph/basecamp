@@ -11,6 +11,7 @@ class MembershipsController < ApplicationController
       redirect_to project, :notice => "Member saved successfully."
     else
       flash[:error] = "User does not exist."
+       @membership = Membership.new
       render 'new'
     end
   end
