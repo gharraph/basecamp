@@ -7,13 +7,13 @@
 </div>
 
 <div class="span4 offset 6">
+	<%= render :partial => "lists/embedded_form", :locals => {:list => List.new, :project => @project} %>
+	<br />
+	<br />
 	<%= render :partial => "memberships/membership" %> 
 	<% if current_user.id == @project.owner_id %>
 	  <%=link_to "Add member to project", new_project_membership_path(@project), :class => "btn btn-info" %>
 	<% end %>
-	<br />
-	<br />
-	<%= render :partial => "lists/embedded_form", :locals => {:list => List.new, :project => @project} %>
 </div>
 </div>
 
