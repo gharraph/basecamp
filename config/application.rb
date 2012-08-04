@@ -60,5 +60,7 @@ module Basecamp
     config.assets.version = '1.0'
 
     config.assets.initialize_on_precompile = false
+    
+    # config.action_view.JavaScript_expansions[:defaults] = %w(jquery rails application)
   end
 end

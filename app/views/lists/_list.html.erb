@@ -1,0 +1,7 @@
+<tr>
+<td><%=link_to list.name, project_list_path(list.project, list) %></td>
+<td><%= link_to 'Edit', edit_project_list_path(@project, list), :class => "btn btn-primary" %></td>
+   <td><%= link_to 'Delete', project_list_path(@project, list), method: :delete, data: { confirm: 'Are you sure?' },  :class => "btn btn-danger"%></td>
+</tr>
+
+

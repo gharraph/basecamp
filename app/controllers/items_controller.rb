@@ -8,11 +8,13 @@ class ItemsController < ApplicationController
     @item = Item.new(params[:item])
     @list = List.find params[:list_id]
     @item.list_id = @list.id
-    if @item.save
-      redirect_to list_path(@list)
-    else
-      flash[:error] = "Item description cannot be blank"
-      render 'new'
+    respond_to do |format|
+      if @item.save
+        format.js
+      else
+        flash[:error] = "Item description cannot be blank"
+        render 'new'
+      end
     end
   end
 
@@ -33,6 +35,14 @@ class ItemsController < ApplicationController
       flash[:notice] = "Your item has been updated"
       redirect_to @list
     end
+  end
+  
+  def destroy
+     @item = Item.find(params[:id])
+     @list = @item.list
+     @item.destroy
+     flash[:notice] = "Your item has been deleted."
+     redirect_to list_path(@list)
   end
 
 end

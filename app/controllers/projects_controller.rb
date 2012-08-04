@@ -1,5 +1,7 @@
 class ProjectsController < ApplicationController
   before_filter :current_user_check, :except => [:index]
+  respond_to :html, :js
+  
   def new
     @project = Project.new
   end
@@ -7,12 +9,15 @@ class ProjectsController < ApplicationController
   def create
     @project = Project.new(params[:project])
     @project.owner = current_user
-    if @project.save
-      @project.users << current_user
-      redirect_to @project
-    else
-      flash[:error] = "Project name can not be blank"
-      render 'new'
+    respond_to do |format|
+      if @project.save
+        @project.users << current_user
+          format.html { redirect_to(@project, :notice => 'Project created.') }  
+          format.js
+      else
+        flash[:error] = "Project name can not be blank"
+        render 'new'
+      end
     end
   end
 

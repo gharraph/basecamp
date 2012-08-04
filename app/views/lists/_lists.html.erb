@@ -1,10 +1,4 @@
-<table class='table'>
-<thead><th>Lists:</th></thead>
-<tbody>
-<tr>
-<% @project.lists.each do |list| %>
-<td><%=link_to list.name, project_list_path(@project, list) %></td>
-</tr>
-</tbody>
-<% end %>
+<table class='table' id='list_table'>
+   <thead> <th>Name</th> </thead>
+  <%= render :partial => "lists/list", :collection => @project.lists %>
 </table>

@@ -1,4 +1,4 @@
-<%= form_for([:project, @list]) do |f|%>
+<%= form_for([:project, @list]:html => {:class => 'well'}) do |f|%>
   <div class="field">
     <%= f.label "Name your list:" %>
     <%= f.text_field :name %>

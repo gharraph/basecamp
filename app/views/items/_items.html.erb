@@ -1,18 +1,4 @@
-<table class='table'>
-
-<thead>
-  <th>Items:</th>
-<th>Assigned to:</th>
-<th>Actions:</th>
-</thead>
-<tbody>
-
-<tr>
-<% @list.items.each do |item| %>
-<td><%=item.description%></td>
-<td><%= item.user.email %></td>
-<td><%= link_to 'Edit or assign item to a member', edit_list_item_path(@list, item) %></td>
-</tr>
-</tbody>
-<% end %>
+<table class='table' id='item_table'>
+   <thead> <th>Name</th> </thead>
+  <%= render :partial => "items/item", :collection => @list.items %>
 </table>

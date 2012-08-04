@@ -1,10 +1,22 @@
 <h1>Your Project:</h1>
 <h2><%= @project.name%></h2></br>
-<%= render :partial => "lists/lists" %>
-<%= render :partial => "memberships/membership" %>
-<p>
-<%=link_to "New List", new_project_list_path(@project), :class => "btn btn-primary"%>
-<% if current_user.id == @project.owner_id %>
-  <%=link_to "Add member to project", new_project_membership_path(@project), :class => "btn btn-info" %>
-<% end %>
-</p>
+
+<div class="span12">
+<div class="span6">
+	<%= render :partial => "lists/lists" %>
+</div>
+
+<div class="span4 offset 6">
+	<%= render :partial => "memberships/membership" %> 
+	<% if current_user.id == @project.owner_id %>
+	  <%=link_to "Add member to project", new_project_membership_path(@project), :class => "btn btn-info" %>
+	<% end %>
+	<br />
+	<br />
+	<%= render :partial => "lists/embedded_form", :locals => {:list => List.new, :project => @project} %>
+</div>
+</div>
+
+
+
+
