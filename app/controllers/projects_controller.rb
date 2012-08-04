@@ -7,24 +7,25 @@ class ProjectsController < ApplicationController
   end
 
   def create
-    @project = Project.new(params[:project])
-    @project.owner = current_user
+      @project = Project.new(params[:project])
+      @project.owner = current_user
     respond_to do |format|
-      if @project.save
-        @project.users << current_user
-          format.html { redirect_to(@project, :notice => 'Project created.') }  
-          format.js
-      else
-        flash[:error] = "Project name can not be blank"
-        render 'new'
+        if @project.save
+          @project.users << current_user
+            format.html { redirect_to(@project, :notice => 'Project created.') }  
+            format.js
+        else
+          flash[:error] = "Project name can not be blank"
+          render 'new'
+        end
       end
-    end
   end
 
   def index
     if current_user
       @projects = current_user.projects
     else
+      # flash[:error] = "Project name can not be blank"
       @projects = Project.where(:private => false)
     end
   end
