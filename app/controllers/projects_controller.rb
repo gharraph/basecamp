@@ -35,7 +35,7 @@ class ProjectsController < ApplicationController
       redirect_to root_path
     end
   end
-
+  
   def edit
     @project = current_user.owned_projects.find(params[:id])
   end
