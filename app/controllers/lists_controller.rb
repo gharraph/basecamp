@@ -24,16 +24,17 @@ class ListsController < ApplicationController
   end
 
   def edit
-    @list = current_user.owned_projects.find(params[:id])
+    @list = List.find(params[:id])
   end
 
   def update
 
-    @list = current_user.projects.find(params[:id])
+    @list = List.find(params[:id])
+    @project = @list.project
     # if current_user.id == @list.project.owner_id
     @list.update_attributes(params[:list])
       flash[:notice] = "Your list has been updated."
-      redirect_to @list
+      redirect_to project_path(@project)
   end
   
   def destroy

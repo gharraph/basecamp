@@ -7,6 +7,7 @@ class ItemsController < ApplicationController
   def create
     @item = Item.new(params[:item])
     @list = List.find params[:list_id]
+    @project = @list.project
     @item.list_id = @list.id
     respond_to do |format|
       if @item.save
@@ -20,7 +21,7 @@ class ItemsController < ApplicationController
 
   def show
      @item = Item.find(params[:id])
-     @list = List.find(params[:list_id])
+     @list = @item.list
   end
 
   def edit
